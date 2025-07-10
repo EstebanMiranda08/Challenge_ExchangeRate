@@ -4,12 +4,15 @@
 Esta aplicación obtiene los datos desde la API Exchange Rate con los valores actualizados de las monedas de cada pais y entregando el calculo preciso en base al monto ingresado por el usuario.</p>
 
 <br></br>
-
 :wrench:<h1>Funcionalidad:</h1>
-- `Validaciones:`
-El codigo de divisa de cada pais es validado .
+- `Menú:`
+La aplicación dispone de un menú en el cual el usuario puede elegir la opción en base a sus necesidades.
 
-- `Sorteo:`
+- `Validaciones:`
+El codigo de divisa de cada pais es validado en base a lo entregado por la API e indicando al usuario si ingresó la divisa incorrectamente.
+Tambien está configurada la validación en el ingreso del monto a convertir. La aplicación solo acepta valores numericos enteros, de lo contrario muestra en pantalla un mensaje de error.
+
+- `Conversión de datos:`
 Al presionar el botón "Añadir", la funcionalidad de la página activa un algoritmo de sorteo aleatorio. El sistema asegura que cada nombre tenga las mismas probabilidades de ser seleccionado, sin ningún tipo de preferencia. El algoritmo selecciona un ganador de forma imparcial, de esta forma el sorteo será justo.
 
 - `Sorteo limitado:`
