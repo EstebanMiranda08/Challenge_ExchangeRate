@@ -13,7 +13,8 @@ El codigo de divisa de cada pais es validado en base a lo entregado por la API e
 Tambien está configurada la validación en el ingreso del monto a convertir. La aplicación solo acepta valores numericos enteros, de lo contrario muestra en pantalla un mensaje de error.
 
 - `Conversión de datos:`
-Al presionar el botón "Añadir", la funcionalidad de la página activa un algoritmo de sorteo aleatorio. El sistema asegura que cada nombre tenga las mismas probabilidades de ser seleccionado, sin ningún tipo de preferencia. El algoritmo selecciona un ganador de forma imparcial, de esta forma el sorteo será justo.
+El usuario al momento de elegir la opcion de conversión de monedas, la aplicación obtiene los datos de la API Exchange Rate en base a las divisas indicadas por el usuario. Además, dentro de la aplicación existe un calculo que permite obtener correctamente el monto ingresado por el usuario y el valor de la moneda base. 
+
 
 - `Sorteo limitado:`
 Existe un limite por defecto de 5 amigos, esto con la finalidad de que sea mas simple para el usuario y evitar confusiones por si existen amigos con el mismo nombre.
