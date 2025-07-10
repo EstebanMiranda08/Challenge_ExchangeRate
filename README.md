@@ -1,1 +1,23 @@
-# Challenge_ExchangeRate
+<br></br>
+:clipboard:<h1>Descripción:</h1>
+<p>Este sitio web a sido desarrollado para los usuarios que requieran realizar conversión de divisas.
+Esta aplicación obtiene los datos desde la API Exchange Rate con los valores actualizados de las monedas de cada pais y entregando el calculo preciso en base al monto ingresado por el usuario.</p>
+
+<br></br>
+
+:wrench:<h1>Funcionalidad:</h1>
+- `Validaciones:`
+El codigo de divisa de cada pais es validado .
+
+- `Sorteo:`
+Al presionar el botón "Añadir", la funcionalidad de la página activa un algoritmo de sorteo aleatorio. El sistema asegura que cada nombre tenga las mismas probabilidades de ser seleccionado, sin ningún tipo de preferencia. El algoritmo selecciona un ganador de forma imparcial, de esta forma el sorteo será justo.
+
+- `Sorteo limitado:`
+Existe un limite por defecto de 5 amigos, esto con la finalidad de que sea mas simple para el usuario y evitar confusiones por si existen amigos con el mismo nombre.
+
+<br></br>
+
+:computer:<h1>Tecnologías utilizadas:</h1>
+- `Java`
+- `Gson`
+- `CSS`
