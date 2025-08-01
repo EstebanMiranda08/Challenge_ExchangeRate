@@ -3,13 +3,17 @@ package vista;
 import controlador.Configuracion;
 import controlador.DivisasException;
 import modelo.Divisas;
+
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
 
     public static void ejecutarMenu (){
 
+        List<Divisas> historial = new ArrayList<>();
         Scanner leerDato = new Scanner(System.in);
         boolean salida=false;
         System.out.println("***************************************************");
@@ -50,9 +54,10 @@ public class Menu {
 
                             Divisas result = Configuracion.conversorDivisa(money_base, money_conversor, valor_join);
                             if (result == null) {
-                                System.out.println("Divisa erronea. Por favor ingresar el pais indicado en la lista");
+                                System.out.println("Divisa errónea. Por favor ingresar el pais indicado en la lista");
                             } else {
                                 System.out.println(result);
+                                historial.add(result);
                             }
                         } catch (NumberFormatException e) {
                             System.out.println(" Error: Por favor ingresar un número válido para el monto");
@@ -62,6 +67,7 @@ public class Menu {
                         break;
 
                     case 3:
+                        Divisas.historialConversion(historial);
                         break;
 
                     case 4:

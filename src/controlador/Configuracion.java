@@ -1,7 +1,6 @@
 package controlador;
 
 import modelo.Divisas;
-import modelo.DivisasApi;
 
 import java.text.Normalizer;
 import java.io.IOException;
@@ -24,7 +23,7 @@ public class Configuracion {
 
     }
     public static String verificar_map(String codigo) {
-        Map<String, String> codigos = allmoney();
+        Map<String, String> codigos = divisasTotales();
         if (codigos.containsKey(codigo.toUpperCase())) {
             return codigo.toUpperCase();
         } else {
@@ -36,7 +35,7 @@ public class Configuracion {
                 .normalize(texto.toLowerCase(), Normalizer.Form.NFD)
                 .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
     }
-    public static Map<String, String> allmoney () {
+    public static Map<String, String> divisasTotales() {
 
         Map<String, String> nombres = new HashMap<>();
         nombres.put("USD", "Dólar estadounidense");
@@ -178,7 +177,7 @@ public class Configuracion {
         nombres.put("TJS", "Somoni tayiko");
         nombres.put("TMT", "Manat turcomano");
         nombres.put("TND", "Dinar tunecino");
-        nombres.put("TOP", "Paʻanga tongano");
+        nombres.put("TOP", "Paanga tongano");
         nombres.put("TRY", "Lira turca");
         nombres.put("TTD", "Dólar de Trinidad y Tobago");
         nombres.put("TVD", "Dólar tuvaluano");
@@ -205,9 +204,9 @@ public class Configuracion {
         return nombres;
     }
     public static void mostrarMap(){
-        System.out.println("Estos son todas las monedeas disponibles");
-        allmoney().entrySet().stream()
-                .sorted(Map.Entry.comparingByKey()) // Ordena por clave (código)
+        System.out.println("Estas son las divisas disponibles");
+        divisasTotales().entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
                 .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
     }
 
